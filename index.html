@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Test</title>
+    <meta
+      name="viewport"
+      content="width=device-width minimum-scale=1.0 maximum-scale=1.0 user-scalable=no"
+    />
+    <link rel="stylesheet" href="css/main.min.css" />
+  </head>
+
+  <body>
+    <div id="page">
+      <nav id="menu">
+        <ul>
+          <li>
+            <span>Каталог товаров</span>
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+          </li>
+          <li>
+            <span>Новости и акции</span>
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+          </li>
+          <li>
+            <span>Наши услуги</span>
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+          </li>
+          <li>
+            <span>Портфолио</span>
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+          </li>
+          <li><a href="#">Блог</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Отзывы о нас</a></li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">Дизайнеры</a></li>
+        </ul>
+      </nav>
+      <div class="navbar d-xl-none d-md-flex">
+        <div class="row justify-content-between align-items-center">
+          <div class="navbar_left">
+            <a class="mburger" href="#menu">
+              <b></b>
+              <b></b>
+              <b></b>
+            </a>
+            <img src="./img/tablet_logo.png" alt="logo" />
+          </div>
+
+          <div class="navbar_right">
+            <a href="tel: +74822648080"
+              ><img src="./img/callback.png" alt="callback"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid content">
+        <div class="row">
+          <aside class="aside col-xl-4 d-none d-xl-block">
+            <div class="main_logo">
+              <img src="./img/logo.png" alt="logo" />
+            </div>
+            <nav>
+              <ul class="nav_main">
+                <li><a class="link-border" href="#">Каталог товаров</a></li>
+                <li>
+                  <a class="link-border" href="#">Новости и акции</a>
+                  <span class="caret"><a href="#">2</a></span>
+                </li>
+                <li><a class="link-border" href="#">Наши услуги</a></li>
+                <li><a class="link-border" href="#">Портфолио</a></li>
+                <li><a class="link-border" href="#">Блог</a></li>
+                <li><a class="link-border" href="#">Контакты</a></li>
+              </ul>
+              <ul class="nav_add">
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Отзывы о нас</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Дизайнеры</a></li>
+              </ul>
+            </nav>
+            <div class="aside_callback">
+              <a href="tel: +74822648080">+7 (4822) 648-080</a>
+              <button
+                type="button"
+                class="aside_callback_btn"
+                data-toggle="modal"
+                data-target="#ModalCallback"
+              >
+                Заказать звонок
+              </button>
+            </div>
+          </aside>
+          <main class="main col-xl-20 col-24">
+            <div class="main_body">
+              <div class="main_body_text">
+                <h1>Декоративные покрытия</h1>
+                <h2>от лучших производителей</h2>
+              </div>
+              <button
+                type="button"
+                class="main_body_btn"
+                data-toggle="modal"
+                data-target="#ModalCallback"
+              >
+                Подробнее
+              </button>
+            </div>
+            <div class="main_carousel owl-carousel">
+              <div class="slide">
+                <img src="./img/main_bg.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="./img/main_bg.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="./img/main_bg.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="./img/main_bg.jpg" alt="" />
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+
+      <script src="./js/main.min.js"></script>
+    </div>
+    <div
+      class="modal fade"
+      id="ModalCallback"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="ModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="modal_img">
+                  <img src="./img/form.jpg" alt="form_img" />
+                </div>
+                <div class="modal_form">
+                  <button
+                    id="close_modal"
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true"
+                      ><img src="./img/close.png" alt="close"
+                    /></span>
+                  </button>
+                  <div class="form_title">
+                    <h2>Обратная связь</h2>
+                  </div>
+                  <form
+                    id="formCallback"
+                    class="form_callback"
+                    autocomplete="off"
+                    action="./vendor/handler.php"
+                    method="post"
+                  >
+                    <div class="form_body">
+                      <div class="form-group">
+                        <label for="useremail">Email<span>*</span></label>
+                        <input
+                          type="text"
+                          name="email"
+                          id="username"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group">
+                        <label>Телефон<span>*</span></label>
+                        <input id="phone" type="text" name="phone" required />
+                      </div>
+
+                      <div class="form-group">
+                        <label>Сообщение</label>
+                        <textarea name="message"></textarea>
+                      </div>
+                    </div>
+                    <button
+                      id="btn-submit"
+                      class="form_btn-submit"
+                      type="submit"
+                    >
+                      Отправить
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
